@@ -7,6 +7,7 @@ export type View =
   | 'bus'
   | 'deals'
   | 'merchant'
+  | 'profile'
 
 export type LocationCategory =
   | '图书馆'

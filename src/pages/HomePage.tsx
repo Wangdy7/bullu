@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   ArrowRight,
   ArrowUpRight,
@@ -23,6 +24,7 @@ import {
 import type { View } from '../types'
 import { Avatar } from '../components/Avatar'
 import { GlobeHero } from '../components/GlobeHero'
+import { MobileHome } from '../components/MobileHome'
 import { Reveal } from '../components/Reveal'
 import { LocalizedPage } from '../components/LocalizedPage'
 
@@ -97,8 +99,35 @@ function MiniMap() {
   )
 }
 
+function useMobileHomepage() {
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia('(max-width: 900px)').matches : false,
+  )
+
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 900px)')
+    const onChange = () => setIsMobile(query.matches)
+    onChange()
+    query.addEventListener('change', onChange)
+    return () => query.removeEventListener('change', onChange)
+  }, [])
+
+  return isMobile
+}
+
 export function HomePage() {
   const { navigate, openAuth, user, toast, t } = useApp()
+  const isMobile = useMobileHomepage()
+
+  if (isMobile) {
+    return (
+      <LocalizedPage>
+        <main className="home-page">
+          <MobileHome />
+        </main>
+      </LocalizedPage>
+    )
+  }
 
   const goHighlight = (highlight: (typeof homepageHighlights)[number]) => {
     navigate(highlight.view as View, highlight.targetId ? { targetId: highlight.targetId } : undefined)
@@ -504,6 +533,8 @@ export function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <MobileHome />
     </main>
     </LocalizedPage>
   )
