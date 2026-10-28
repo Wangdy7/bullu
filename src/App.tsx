@@ -5,7 +5,6 @@ import { useLocalStorage } from './lib/useLocalStorage'
 import { translate, type Language } from './i18n'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { MobileTabBar } from './components/MobileTabBar'
 import { SearchOverlay } from './components/SearchOverlay'
 import { AuthModal } from './components/AuthModal'
 import { Toast } from './components/Toast'
@@ -34,9 +33,6 @@ const DealsPage = lazy(() =>
 const MerchantPage = lazy(() =>
   import('./pages/MerchantPage').then((module) => ({ default: module.MerchantPage })),
 )
-const ProfilePage = lazy(() =>
-  import('./pages/ProfilePage').then((module) => ({ default: module.ProfilePage })),
-)
 
 const VALID_VIEWS: View[] = [
   'home',
@@ -47,7 +43,6 @@ const VALID_VIEWS: View[] = [
   'bus',
   'deals',
   'merchant',
-  'profile',
 ]
 
 const PAGE_TITLES: Record<View, string> = {
@@ -59,7 +54,6 @@ const PAGE_TITLES: Record<View, string> = {
   bus: '校园巴士 · BullU',
   deals: '学生优惠 · BullU',
   merchant: '商家合作 · BullU',
-  profile: '个人中心 · BullU',
 }
 
 function readViewFromHash(): View {
@@ -200,7 +194,6 @@ export default function App() {
   if (view === 'bus') page = <BusPage />
   if (view === 'deals') page = <DealsPage />
   if (view === 'merchant') page = <MerchantPage />
-  if (view === 'profile') page = <ProfilePage />
 
   return (
     <AppContext.Provider value={contextValue}>
@@ -221,7 +214,6 @@ export default function App() {
         </Suspense>
       </div>
       <Footer />
-      <MobileTabBar />
       <SearchOverlay />
       <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
       <Toast message={toastMessage} />
