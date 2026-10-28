@@ -1,0 +1,24 @@
+:root {
+  /* Brand palette */
+  --navy-950: #071426;
+  --navy-900: #0a1c33;
+  --brand-blue: #1769ff;
+  --brand-blue-deep: #0756df;
+  --ice-blue: #7bcbff;
+  --signal-red: #ff303d;
+  --signal-red-hot: #ff7a57;
+
+  /* Product surfaces */
+  --glass-white: rgba(255, 255, 255, 0.72);
+  --glass-white-strong: rgba(255, 255, 255, 0.88);
+  --glass-line: rgba(123, 203, 255, 0.28);
+  --glass-shadow: 0 24px 80px -40px rgba(7, 20, 38, 0.38);
+
+  /* Motion */
+  --motion-fast: 180ms;
+  --motion-base: 420ms;
+  --motion-slow: 900ms;
+  --motion-cinematic: 1200ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

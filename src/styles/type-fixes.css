@@ -1,0 +1,784 @@
+/* A slightly larger type scale for comfortable reading on 1440–1920 px screens. */
+body {
+  font-size: 16px;
+}
+
+.nav-link {
+  font-size: 12.5px;
+}
+
+.header-search {
+  font-size: 11px;
+}
+
+.header-join {
+  font-size: 12px;
+}
+
+.account-trigger {
+  font-size: 11.5px;
+}
+
+.brand__copy strong {
+  font-size: 21px;
+}
+
+.brand__copy small {
+  font-size: 7.5px;
+}
+
+.nav-popover > button span {
+  font-size: 12.5px;
+}
+
+.nav-popover > button small {
+  font-size: 9px;
+}
+
+.button {
+  font-size: 13.5px;
+}
+
+.button--sm {
+  font-size: 12px;
+}
+
+.eyebrow {
+  font-size: 10px;
+}
+
+.section-heading__aside {
+  font-size: 13px;
+}
+
+.text-link {
+  font-size: 12.5px;
+}
+
+.filter-chip {
+  font-size: 12px;
+}
+
+.search-field input {
+  font-size: 13px;
+}
+
+/* Home */
+.hero-badge {
+  font-size: 10px;
+}
+
+.hero-kicker {
+  font-size: 8.5px;
+}
+
+.hero-term {
+  font-size: 9px;
+}
+
+.home-hero__lede {
+  font-size: 13.5px;
+}
+
+.hero-search > span {
+  font-size: 12.5px;
+}
+
+.hero-search kbd {
+  font-size: 8px;
+}
+
+.home-hero__trust p strong {
+  font-size: 10.5px;
+}
+
+.home-hero__trust p {
+  font-size: 9.5px;
+}
+
+.hero-metrics strong {
+  font-size: 18px;
+}
+
+.hero-metrics small {
+  font-size: 9.5px;
+}
+
+.hero-metrics__meta {
+  font-size: 9.5px;
+}
+
+.feature-card__eyebrow {
+  font-size: 8px;
+}
+
+.feature-card__copy small {
+  font-size: 11px;
+}
+
+.mini-step {
+  font-size: 9.5px;
+}
+
+.feature-map-pill,
+.market-live-pill {
+  font-size: 8.5px;
+}
+
+.utility-card__copy small {
+  font-size: 8px;
+}
+
+.utility-card__copy strong {
+  font-size: 13px;
+}
+
+.utility-card__copy > span {
+  font-size: 9.5px;
+}
+
+.utility-card__status {
+  font-size: 8px;
+}
+
+.today-card__label {
+  font-size: 9px;
+}
+
+.today-card__body strong {
+  font-size: 13px;
+}
+
+.today-card__body small {
+  font-size: 10px;
+}
+
+.home-product__meta {
+  font-size: 8.5px;
+}
+
+.home-product__body > strong {
+  font-size: 12px;
+}
+
+.home-product__price {
+  font-size: 16px;
+}
+
+.home-deal__top {
+  font-size: 8px;
+}
+
+.home-deal__body > strong {
+  font-size: 12px;
+}
+
+.home-deal__bottom {
+  font-size: 9px;
+}
+
+.community-strip__copy > p {
+  font-size: 12px;
+}
+
+.community-bubble strong {
+  font-size: 11.5px;
+}
+
+.community-bubble__meta {
+  font-size: 8.5px;
+}
+
+.community-bubble small {
+  font-size: 8px;
+}
+
+.community-strip__fine {
+  font-size: 9px;
+}
+
+.home-cta > p {
+  font-size: 12px;
+}
+
+.home-cta__stats {
+  font-size: 9px;
+}
+
+.site-footer__brand p {
+  font-size: 12px;
+}
+
+.site-footer__label {
+  font-size: 9px;
+}
+
+.site-footer__column button,
+.site-footer__column a,
+.site-footer__text {
+  font-size: 11.5px;
+}
+
+.site-footer__cta > strong {
+  font-size: 14px;
+}
+
+.site-footer__cta > span {
+  font-size: 8.5px;
+}
+
+.site-footer__cta > button {
+  font-size: 10.5px;
+}
+
+.site-footer__bottom {
+  font-size: 9px;
+}
+
+/* Freshman */
+.freshman-hero__desc {
+  font-size: 12.5px;
+}
+
+.freshman-facts > span {
+  font-size: 9.5px;
+}
+
+.freshman-step > strong {
+  font-size: 13px;
+}
+
+.freshman-step > small {
+  font-size: 9.5px;
+}
+
+.freshman-step__detail {
+  font-size: 9.5px;
+}
+
+.freshman-step__status {
+  font-size: 8.5px;
+}
+
+.resource-card__meta {
+  font-size: 8.5px;
+}
+
+.resource-card__copy small {
+  font-size: 10.5px;
+}
+
+.resource-card__footer {
+  font-size: 9px;
+}
+
+.freshman-help strong {
+  font-size: 11.5px;
+}
+
+.freshman-help span {
+  font-size: 9.5px;
+}
+
+.freshman-faq__intro > p {
+  font-size: 11.5px;
+}
+
+.faq-item__question > span {
+  font-size: 13px;
+}
+
+.faq-item > p {
+  font-size: 11px;
+}
+
+/* Map */
+.map-head > div:first-child > p,
+.market-head > div:first-child > p,
+.community-head > div:first-child > p,
+.compact-page-head > div > p {
+  font-size: 13px;
+}
+
+.map-head__status,
+.compact-page-head__status {
+  font-size: 9.5px;
+}
+
+.map-head__stats > span {
+  font-size: 9px;
+}
+
+.map-category-pill {
+  font-size: 9.5px;
+  min-height: 30px;
+}
+
+.map-sidebar .search-field input {
+  font-size: 11.5px;
+}
+
+.map-sidebar__label {
+  font-size: 9px;
+}
+
+.popular-pin {
+  font-size: 9px;
+  min-height: 31px;
+}
+
+.map-sidebar__list-head {
+  font-size: 8.5px;
+}
+
+.map-location-row__copy strong {
+  font-size: 10.5px;
+}
+
+.map-location-row__copy small {
+  font-size: 8px;
+}
+
+.map-sidebar__note {
+  font-size: 8.5px;
+}
+
+.map-toolbar__title {
+  font-size: 10px;
+}
+
+.map-toolbar__hint {
+  font-size: 8.5px;
+}
+
+.view-toggle button {
+  font-size: 9.5px;
+  min-height: 31px;
+}
+
+.map-info h2 {
+  font-size: 18px;
+}
+
+.map-info__en {
+  font-size: 9px;
+}
+
+.map-info > p {
+  font-size: 10.5px;
+}
+
+.map-info__category,
+.map-info__open {
+  font-size: 8px;
+}
+
+.map-info__facts small {
+  font-size: 7.5px;
+}
+
+.map-info__facts strong {
+  font-size: 9px;
+}
+
+.map-info__actions .button {
+  font-size: 9px;
+  min-height: 34px;
+}
+
+.map-info__route {
+  font-size: 8.5px;
+}
+
+.map-pin__label strong {
+  font-size: 8.5px;
+}
+
+.map-pin__label small {
+  font-size: 7px;
+}
+
+.map-legend > span {
+  font-size: 8.5px;
+}
+
+.map-disclaimer {
+  font-size: 8.5px;
+}
+
+.map-type-label {
+  font-size: 7.5px;
+}
+
+.map-route-banner strong {
+  font-size: 9.5px;
+}
+
+.map-route-banner small,
+.map-route-banner > span:last-child {
+  font-size: 7.5px;
+}
+
+.map3d-chip,
+.map3d-reset {
+  font-size: 8px;
+}
+
+.map3d-pin__label strong {
+  font-size: 8px;
+}
+
+.map3d-pin__label small {
+  font-size: 6.5px;
+}
+
+/* Market */
+.market-head__search input {
+  font-size: 11.5px;
+}
+
+.market-filter__head > span {
+  font-size: 10.5px;
+}
+
+.market-filter__head > button {
+  font-size: 8.5px;
+}
+
+.filter-block__title {
+  font-size: 9.5px;
+}
+
+.market-category-row {
+  font-size: 10px;
+  min-height: 32px;
+}
+
+.market-category-row small {
+  font-size: 8px;
+}
+
+.price-option {
+  font-size: 9.5px;
+}
+
+.condition-option {
+  font-size: 8.5px;
+  min-height: 29px;
+}
+
+.filter-tip {
+  font-size: 8.5px;
+}
+
+.market-toolbar__count {
+  font-size: 9.5px;
+}
+
+.market-sort,
+.market-sort select {
+  font-size: 9px;
+}
+
+.listing-card__meta {
+  font-size: 8px;
+}
+
+.listing-card__body > strong {
+  font-size: 11.5px;
+}
+
+.listing-card__price {
+  font-size: 17px;
+}
+
+.listing-card__seller {
+  font-size: 8px;
+}
+
+.listing-card__footer > span:last-child {
+  font-size: 7.5px;
+}
+
+.listing-card__condition {
+  font-size: 7.5px;
+}
+
+.market-trust {
+  font-size: 8.5px;
+}
+
+.publish-card > strong {
+  font-size: 14px;
+}
+
+.publish-card > p {
+  font-size: 9.5px;
+}
+
+.market-side-card > strong {
+  font-size: 11.5px;
+}
+
+.market-side-card > p {
+  font-size: 9px;
+}
+
+.market-side-card .text-link {
+  font-size: 8.5px;
+}
+
+.boost-pills span {
+  font-size: 7.5px;
+}
+
+.listing-detail__desc {
+  font-size: 11.5px;
+}
+
+.listing-detail__facts small {
+  font-size: 7px;
+}
+
+.listing-detail__facts strong {
+  font-size: 8.5px;
+}
+
+.listing-seller strong {
+  font-size: 10px;
+}
+
+.listing-seller small {
+  font-size: 8px;
+}
+
+.listing-detail__actions .button {
+  font-size: 10px;
+  min-height: 40px;
+}
+
+.listing-detail__fine {
+  font-size: 7.8px;
+}
+
+.image-upload__empty strong {
+  font-size: 10.5px;
+}
+
+.image-upload__empty small {
+  font-size: 8.5px;
+}
+
+/* Community */
+.community-card h3 {
+  font-size: 16px;
+}
+
+.community-card > p {
+  font-size: 11px;
+}
+
+.community-card__head strong {
+  font-size: 10.5px;
+}
+
+.community-card__head small,
+.community-card__topic {
+  font-size: 8px;
+}
+
+.community-action {
+  font-size: 9px;
+}
+
+.community-composer {
+  font-size: 11px;
+}
+
+.community-side-card > strong {
+  font-size: 12px;
+}
+
+.community-side-card > p {
+  font-size: 9px;
+}
+
+.trend-list button strong {
+  font-size: 9.5px;
+}
+
+.community-side-card--rules li {
+  font-size: 9px;
+}
+
+.community-aside-cta > strong {
+  font-size: 12px;
+}
+
+/* Supporting pages */
+.bus-hero__copy p,
+.bus-route-card__copy small,
+.bus-timetable > small {
+  font-size: 9px;
+}
+
+.bus-route-card__copy strong {
+  font-size: 12px;
+}
+
+.bus-route-card__next strong {
+  font-size: 16px;
+}
+
+.bus-hero__route {
+  font-size: 9px;
+}
+
+.bus-detail-card__head small {
+  font-size: 8px;
+}
+
+.bus-timetable > div > span {
+  font-size: 12px;
+}
+
+.bus-stops li strong {
+  font-size: 9px;
+}
+
+.bus-stops li small,
+.bus-note {
+  font-size: 8px;
+}
+
+.bus-note strong {
+  font-size: 9px;
+}
+
+.deals-hero__copy > p {
+  font-size: 10.5px;
+}
+
+.deal-card h3 {
+  font-size: 14px;
+}
+
+.deal-card p {
+  font-size: 9.5px;
+}
+
+.deal-card__partner,
+.deal-card__meta {
+  font-size: 8px;
+}
+
+.deal-claim {
+  font-size: 8.5px;
+}
+
+.deals-disclosure {
+  font-size: 8.5px;
+}
+
+.merchant-hero__copy > p {
+  font-size: 11.5px;
+}
+
+.merchant-benefit > strong {
+  font-size: 11px;
+}
+
+.merchant-benefit > p {
+  font-size: 9px;
+}
+
+.plan-card > p {
+  font-size: 10px;
+}
+
+.plan-card li {
+  font-size: 9.5px;
+}
+
+.plan-card .button {
+  font-size: 10px;
+}
+
+.merchant-contact-copy > p {
+  font-size: 10.5px;
+}
+
+/* Modals */
+.modal__title {
+  font-size: 24px;
+}
+
+.modal-intro {
+  font-size: 11.5px;
+}
+
+.field > span:first-child {
+  font-size: 11px;
+}
+
+.field__control input,
+.field__control select,
+.field textarea {
+  font-size: 13px;
+}
+
+.modal.search-panel .search-panel__head h2 {
+  font-size: 26px;
+}
+
+.search-panel__field input {
+  font-size: 14px;
+}
+
+.search-panel__suggestions strong {
+  font-size: 11.5px;
+}
+
+.search-panel__suggestions small {
+  font-size: 9.5px;
+}
+
+.search-result-row strong {
+  font-size: 12px;
+}
+
+.search-result-row small {
+  font-size: 9px;
+}
+
+.search-panel__quick button {
+  font-size: 11px;
+}
+
+.auth-modal__intro {
+  font-size: 11px;
+}
+
+.auth-form .field > span:first-child {
+  font-size: 10.5px;
+}
+
+.auth-modal__demo {
+  font-size: 9.5px;
+}
+
+.auth-modal__fine {
+  font-size: 8.5px;
+}
+
+.resource-modal__body > p {
+  font-size: 12px;
+}
+
+.resource-tips li {
+  font-size: 9.5px;
+}
+
+.form-note {
+  font-size: 9.5px;
+}

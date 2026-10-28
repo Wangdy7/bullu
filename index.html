@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8faff" />
+    <meta
+      name="description"
+      content="BullU 是面向 UKM Bangi 学生的智慧校园平台：校园地图、新生中心、二手市场、校园社区、巴士、学生优惠与商家合作。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BullU · 你的校园，你的生活，我们的社区" />
+    <meta
+      property="og:description"
+      content="面向 UKM Bangi 学生的智慧校园平台。Explore. Connect. Trade. Thrive."
+    />
+    <link rel="preload" as="image" href="./brand/bullu-mark.png" />
+    <link rel="icon" type="image/png" href="./brand/favicon.png" />
+    <link rel="apple-touch-icon" href="./brand/favicon.png" />
+    <title>BullU · 你的校园，你的生活，我们的社区</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #02050c;
+      }
+
+      #boot {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 43%, rgba(24, 89, 196, 0.2), transparent 28%),
+          radial-gradient(circle at 50% 52%, #071426 0%, #02050c 58%, #010308 100%);
+        color: #f4fbff;
+        font-family: Inter, system-ui, sans-serif;
+      }
+
+      #boot::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.28;
+        background-image: radial-gradient(circle, rgba(170, 213, 255, 0.6) 0 0.7px, transparent 0.9px);
+        background-size: 117px 91px;
+        mask-image: linear-gradient(180deg, transparent, #000 30%, #000 72%, transparent);
+      }
+
+      #boot img {
+        position: relative;
+        width: 54px;
+        height: 54px;
+        filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(110, 190, 255, 0.5));
+        animation: boot-logo-breathe 2.8s ease-in-out infinite;
+      }
+
+      @keyframes boot-logo-breathe {
+        0%, 100% { transform: scale(1); opacity: 0.88; }
+        50% { transform: scale(1.035); opacity: 1; }
+      }
+
+      #boot strong {
+        position: relative;
+        font-size: 18px;
+        font-weight: 620;
+        letter-spacing: -0.04em;
+      }
+
+      #boot small {
+        position: relative;
+        color: rgba(181, 212, 247, 0.42);
+        font-size: 6.5px;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+      }
+
+      #boot i {
+        position: relative;
+        display: block;
+        width: 82px;
+        height: 1px;
+        margin-top: 8px;
+        overflow: hidden;
+        background: rgba(145, 184, 232, 0.16);
+      }
+
+      #boot i::after {
+        content: '';
+        display: block;
+        width: 38%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, #8fd7ff, transparent);
+        animation: boot-scan 1.35s ease-in-out infinite;
+      }
+
+      @keyframes boot-scan {
+        from { transform: translateX(-120%); }
+        to { transform: translateX(300%); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot i::after { animation: none; width: 100%; opacity: 0.35; }
+        #boot img { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot" aria-hidden="true">
+        <img src="./brand/bullu-mark.png" alt="" />
+        <strong>BullU</strong>
+        <small>UKM · BANGI</small>
+        <i></i>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
