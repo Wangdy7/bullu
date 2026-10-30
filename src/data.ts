@@ -643,7 +643,7 @@ export function getSearchEntries(
 }
 
 export const resourceQuickFacts = [
-  { value: '4 步', label: '完成新生准备' },
+  { value: '6 步', label: '完成入学任务' },
   { value: '6 篇', label: '本地化指南' },
   { value: '8 个', label: '校园关键地点' },
 ]

@@ -50,6 +50,38 @@ export interface FreshmanStep {
   detail: string
 }
 
+export type FreshmanTaskIcon = 'materials' | 'medical' | 'online' | 'onsite' | 'visa' | 'systems'
+
+export interface FreshmanTaskChecklistItem {
+  id: string
+  label: string
+}
+
+export interface FreshmanTaskLink {
+  label: string
+  url: string
+}
+
+export interface FreshmanTaskStep {
+  title: string
+  detail: string
+}
+
+export interface FreshmanTask {
+  id: string
+  number: string
+  title: string
+  subtitle: string
+  summary: string
+  icon: FreshmanTaskIcon
+  steps: FreshmanTaskStep[]
+  checklist: FreshmanTaskChecklistItem[]
+  links: FreshmanTaskLink[]
+  locationId?: string
+  locationLabel?: string
+  helpPrompt: string
+}
+
 export type ResourceIcon =
   | 'bed'
   | 'course'
