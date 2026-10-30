@@ -16,7 +16,7 @@ export function WelcomeHero({ audience, onAudienceChange, onStart }: WelcomeHero
     <section className="fc-hero" aria-labelledby="fc-hero-title">
       <div className="fc-hero__media">
         <motion.img
-          src="./images/ukm-campus-sign.jpg"
+          src="./images/ukm-campus-sign-clean.jpg"
           alt="UKM Bangi 校园入口标志"
           initial={reduce ? false : { opacity: 0, scale: 1.035 }}
           animate={{ opacity: 1, scale: 1 }}
