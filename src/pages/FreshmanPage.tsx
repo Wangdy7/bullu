@@ -14,7 +14,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { useApp } from '../app-context'
-import { freshmanFaqs, freshmanResources, resourceQuickFacts } from '../data'
+import { freshmanFaqs, freshmanResources, freshmanSteps, resourceQuickFacts } from '../data'
 import type { FreshmanResource } from '../types'
 import { useLocalStorage } from '../lib/useLocalStorage'
 import { resourceIconMap, stepIconMap } from '../lib/icons'
@@ -22,10 +22,10 @@ import { cn } from '../lib/utils'
 import { Modal } from '../components/Modal'
 import { Reveal } from '../components/Reveal'
 import { LocalizedPage } from '../components/LocalizedPage'
-import { FreshmanTaskCenter } from '../components/FreshmanTaskCenter'
 
 export function FreshmanPage() {
   const { navigate, toast, initialSearch, targetId, t } = useApp()
+  const [completed, setCompleted] = useLocalStorage<string[]>('bullu-freshman-steps', [])
   const [readResources, setReadResources] = useLocalStorage<string[]>('bullu-read-resources', [])
   const [openResource, setOpenResource] = useState<FreshmanResource | null>(null)
   const [query, setQuery] = useState(initialSearch ?? '')
@@ -60,6 +60,17 @@ export function FreshmanPage() {
     })
   }, [category, query])
 
+  const completedCount = completed.length
+  const progress = (completedCount / freshmanSteps.length) * 100
+
+  const toggleStep = (id: string) => {
+    const isComplete = completed.includes(id)
+    setCompleted((current) =>
+      isComplete ? current.filter((item) => item !== id) : [...current, id],
+    )
+    toast(isComplete ? '已取消这一步的完成标记。' : '已完成，一步步来就好。')
+  }
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -86,7 +97,7 @@ export function FreshmanPage() {
             <h1>新生中心</h1>
             <p className="freshman-hero__sub">从报到第一天起，轻松开启你的校园生活。</p>
             <p className="freshman-hero__desc">
-              材料、体检、注册、报到、签证、选课……那些刚来时最容易卡住的几步，
+              注册、校园卡、选课、住宿……那些刚来时最容易卡住的几步，
               已经有人替你走过，并整理在这里。
             </p>
             <div className="freshman-hero__actions">
@@ -121,10 +132,10 @@ export function FreshmanPage() {
               </span>
               <span>
                 <small>{t('新生清单')}</small>
-                <strong>6 个入学任务 · 手动记录</strong>
+                <strong>{completedCount} / 4 步已完成</strong>
               </span>
               <span className="freshman-mini-card__progress">
-                <i style={{ width: '0%' }} />
+                <i style={{ width: `${progress}%` }} />
               </span>
             </div>
             <div className="freshman-float-note">
@@ -135,7 +146,72 @@ export function FreshmanPage() {
         </div>
       </section>
 
-      <FreshmanTaskCenter />
+      <section className="page-width freshman-stepper-section" id="freshman-checklist">
+        <Reveal>
+          <div className="freshman-stepper">
+            <div className="freshman-stepper__head">
+              <div>
+                <span className="eyebrow">
+                  <span>YOUR FIRST WEEK</span>
+                  <i />
+                  入学准备
+                </span>
+                <h2>四步，把新的校园生活安顿好。</h2>
+              </div>
+              <div className="freshman-stepper__progress">
+                <span>
+                  <strong>{completedCount}</strong> / {freshmanSteps.length}
+                </span>
+                <div>
+                  <i style={{ width: `${progress}%` }} />
+                </div>
+              </div>
+            </div>
+
+            <div className="freshman-steps">
+              {freshmanSteps.map((step, index) => {
+                const StepIcon = stepIconMap[step.icon]
+                const done = completed.includes(step.id)
+                const active = !done && completedCount === index
+                return (
+                  <button
+                    key={step.id}
+                    className={cn('freshman-step', done && 'is-done', active && 'is-current')}
+                    onClick={() => toggleStep(step.id)}
+                    aria-pressed={done}
+                  >
+                    <span className="freshman-step__top">
+                      <span className="freshman-step__number">
+                        {done ? <Check size={14} strokeWidth={2.8} /> : `0${index + 1}`}
+                      </span>
+                      <span className="freshman-step__icon">
+                        <StepIcon size={18} strokeWidth={1.8} />
+                      </span>
+                    </span>
+                    <strong>{step.title}</strong>
+                    <small>{step.subtitle}</small>
+                    <span className="freshman-step__detail">{step.detail}</span>
+                    <span className="freshman-step__status">
+                      {done ? '已完成' : active ? '现在做这一步' : '点击标记完成'}
+                    </span>
+                    {index < freshmanSteps.length - 1 && <span className="freshman-step__line" />}
+                  </button>
+                )
+              })}
+            </div>
+
+            <div className="freshman-stepper__foot">
+              <span>
+                <Sparkles size={13} strokeWidth={2} />
+                进度自动保存在当前浏览器中
+              </span>
+              {completedCount > 0 && (
+                <button onClick={() => setCompleted([])}>重置进度</button>
+              )}
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
       <section className="section freshman-resources" id="freshman-resources">
         <div className="page-width">
