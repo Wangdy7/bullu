@@ -50,6 +50,47 @@ export interface FreshmanStep {
   detail: string
 }
 
+export type StudentAudience = 'international' | 'local'
+export type AdmissionStatus = 'not_started' | 'in_progress' | 'completed'
+export type AdmissionTaskIcon = 'documents' | 'medical' | 'online' | 'onboarding' | 'visa' | 'courses'
+
+export interface AdmissionChecklistItem {
+  id: string
+  label: string
+}
+
+export interface AdmissionFaq {
+  question: string
+  answer: string
+}
+
+export interface AdmissionStep {
+  title: string
+  detail: string
+}
+
+export interface AdmissionTask {
+  id: string
+  number: string
+  title: string
+  subtitle: string
+  summary: string
+  icon: AdmissionTaskIcon
+  audience: StudentAudience | 'all'
+  steps: AdmissionStep[]
+  checklist: {
+    international: AdmissionChecklistItem[]
+    local: AdmissionChecklistItem[]
+  }
+  officialLinks: { label: string; url: string }[]
+  location?: {
+    label: string
+    targetId?: string
+  }
+  faqs: AdmissionFaq[]
+  helpPrompt: string
+}
+
 export type ResourceIcon =
   | 'bed'
   | 'course'
